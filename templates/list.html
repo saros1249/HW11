@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home page</title>
+  </head>
+  <body>
+  <h1>Все кандидаты</h1>
+  {% for candidate in candidates %}
+  <p><a href="//localhost:5000/candidates/{{candidate.id}}"> {{candidate.name}} </a></p>
+  {% endfor %}
+  </body>
+</html>

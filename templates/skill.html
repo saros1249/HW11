@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Skills page</title>
+</head>
+<body>
+{% for candidate in candidates %}
+{% for names in candidate_skill_name %}
+{% if names in candidate.name %}
+<p> <a href="//localhost:5000/candidates/{{candidate.id}}"> {{candidate.name}} </a></p>
+{% endif %}
+{% endfor %}
+{% endfor %}
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Name candidate page</title>
+</head>
+<body>
+<h1> Найдено кандидатов {{count}} </h2>
+    {% for candidate in candidates %}
+    {% for n in candidate_name %}
+    {% if n in candidate.name %}
+    <p> <a href="//localhost:5000/candidates/{{candidate.id}}"> {{candidate.name}} </a></p>
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+</body>
+</html>
