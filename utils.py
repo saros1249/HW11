@@ -1,3 +1,4 @@
+# Утилиты для проекта Домашняя работа - 11 урока.
 import json
 
 
@@ -19,8 +20,9 @@ def get_candidate(candidate_id):
     candidate_list = load_candidates_from_json()
     for i in range(len(candidate_list)):
         if candidate_id == candidate_list[i]['id']:
-            return {'name':candidate_list[i]['name'], 'position':candidate_list[i]['position'],
-            'picture':candidate_list[i]['picture'], 'skills':candidate_list[i]['skills']}
+            return {'name': candidate_list[i]['name'], 'position': candidate_list[i]['position'],
+                    'picture': candidate_list[i]['picture'], 'skills': candidate_list[i]['skills']}
+
 
 def get_candidates_by_name(candidate_name):
     '''
@@ -35,6 +37,7 @@ def get_candidates_by_name(candidate_name):
             name_candidate.append(candidate_list[i]['name'])
     return name_candidate
 
+
 def get_candidates_by_skill(skill_name):
     '''
     Возвращает кандидиатов по skill
@@ -47,5 +50,3 @@ def get_candidates_by_skill(skill_name):
         if skill_name in candidate_list[i]['skills'].lower().split(', '):
             skill_candidate_name.append(candidate_list[i]['name'])
     return skill_candidate_name
-
-
